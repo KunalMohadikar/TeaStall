@@ -6,6 +6,7 @@
     <title>The Tea Stall</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="Stylesheet1.css" media="screen"/>
+    <!-- <script type="text/javascript" src="myscripts.js"></script> -->
   </head>
   <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
@@ -43,7 +44,7 @@
         </form>
       </div>
     </nav>
-
+    <hr class="spaceNavigation">
     <!-- This is for video -->
     <div class="vidCLass">
       <video id ="vidClass1" class="center" controls>
@@ -54,20 +55,18 @@
     <!-- Ths is for the two photos -->
     <div class="container main3">
       <div class="row">
-        <div class="col-md-6">
-          <img id = "magazineCover" src="1cover.png" alt="Snow">
+        <div class="col-md-6" id="topGridSection">
+          <center id="magazineCover1"><img id = "magazineCover" src="1cover.png" alt="Snow"></center>
         </div>
-        <div class="col-md-6 mainHeading">
-          <center>
+        <div class="col-md-6 mainHeading" id="bottomGridSection">
+          <center id="title">
             <h1 class="Heading1">THE TEA STALL</h1>
             <!-- <img id = "StevejobsIterview" src="steve_jobs.png" alt="Forest" style="width:auto"> -->
             <h2 class="Heading3">Artistically Subtle</h2>
-            <br>
-            <br>
-            <h2><a class="link1 Heading2" href="#">Buy</a></h2>
-            <br>
-            <br>
-            <h2><a class="link1 Heading2" href="#">Learn more >></a></h2>
+            <div class="center" style="padding:0px">
+              <h2><a class="link1 redLink" id="buy" href="#">Buy</a></h2>
+              <h2><a class="link1 redLink" href="#">Learn more >></a></h2>
+            </div>
           </center>
         </div>
       </div>
@@ -84,34 +83,20 @@
       <!-- This is for the three columns -->
       <center>
         <div class="main">
-          <div class="row">
-            <div class="col-md">
-              <p  class = "sponsors">GATEFORUM</p>
-            </div>
-            <div class="col-md">
-              <p class = "sponsors">WEARHOUSE</p>
-            </div>
-            <div class="col-md">
-              <p class = "sponsors">GulabSweets</p>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md">
-              <p class = "sponsors">SWIGGY</p>
-            </div>
-            <div class="col-md">
-              <p class = "sponsors">Touch&Glow</p>
-            </div>
-            <div class="col-md">
-              <p class = "sponsors">C Seven</p>
-            </div>
-          </div>
+          <table style="width:100%">
+            <tr>
+              <td><p  class = "sponsors Heading4">GATEFORUM</p></td>
+              <td><p class = "sponsors Heading4">WEARHOUSE</p></td>
+              <td><p class = "sponsors Heading4">GulabSweets</p></td>
+            </tr>
+            <tr>
+              <td><p class = "sponsors Heading4">SWIGGY</p></td>
+              <td><p class = "sponsors Heading4">Touch&Glow</p></td>
+              <td><p class = "sponsors Heading4">C Seven</p></td>
+            </tr>
+          </table>
         </div>
       </center>
-      <div class="container-fluid">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
     </div>
 
     <form  action="#" class = "form1">
@@ -120,24 +105,45 @@
 
 
     <script>
-      // document.getElementById("vidClass1").style.height = window.innerHeight + "px";
       if(window.innerHeight/window.innerWidth >= 1){
         document.getElementById("vidClass1").style.width = "100vw";
+        document.getElementById("magazineCover").style.width = "75vw";
+        var all = document.getElementsByClassName('Heading1');
+        for (var i = 0; i < all.length; i++) {
+          all[i].style.fontSize = "30px";
+        }
+        var all = document.getElementsByClassName('Heading3');
+        for (var i = 0; i < all.length; i++) {
+          all[i].style.fontSize = "20px";
+        }
+
+        var all = document.getElementsByClassName('Heading2');
+        for (var i = 0; i < all.length; i++) {
+          all[i].style.fontSize = "25px";
+        }
+
+        var all = document.getElementsByClassName('Heading4');
+        for (var i = 0; i < all.length; i++) {
+          all[i].style.fontSize = "15px";
+        }
+
+        var all = document.getElementsByClassName('redLink');
+        for (var i = 0; i < all.length; i++) {
+          all[i].style.fontSize = "15px";
+          all[i].style.padding = "10px";
+          all[i].style.marginTop = "2px";
+          all[i].style.marginLeft = "10px";
+          all[i].style.marginBottom = "12%";
+          all[i].style.float="left";
+        }
+        document.getElementById("buy").style.marginLeft = "25vw";
+        document.getElementById('topGridSection').appendChild(document.getElementById('title'));
+        document.getElementById('bottomGridSection').appendChild(document.getElementById('magazineCover1'));
+
       }
       else {
         document.getElementById("vidClass1").style.height = "100vh";
-      }
-      // document.getElementById("magazineCover").style.height = window.innerHeight + "px";
-      if(window.innerHeight/window.innerWidth >=1){
-        document.getElementById("magazineCover").style.width = "100vw";
-      }
-      else {
         document.getElementById("magazineCover").style.height = "100vh";
-      }
-
-      var all = document.getElementsByClassName('Heading1');
-      for (var i = 0; i < all.length; i++) {
-        all[i].style.color = 'red';
       }
     </script>
 
