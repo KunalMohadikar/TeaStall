@@ -1,0 +1,89 @@
+.main{
+  text-align: center;
+  color: gray;
+  padding-top: 5%;
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block
+}
+.vidCLass{
+    background-color: black;
+}
+
+.jumbotron{
+  background-color: white;
+}
+.Heading1{
+  font-size: 80px;
+  padding-top: 10%;
+}
+
+#main2{
+  padding-left: 4%;
+}
+
+.Heading3{
+  color: gray;
+}
+
+.link1{
+  color: red;
+}
+hr.sponsorsline{
+  border: 2px solid gray;
+  width: 100%;
+}
+.SponsorsHeading{
+  color: gray;
+  width:100%;
+}
+
+.button1{
+  font-size: 30px;
+  background-color: red;
+  border: 0px;
+  border-radius: 4px;
+  color: white;
+}
+
+a.link1:link, a.link1:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 8px;
+}
+
+a.link1:hover, a.link1:active {
+  background-color: red;
+  border-radius: 8px;
+}
+
+.buttonfeed{
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  border-radius: 50%;
+}
+
+.sps{
+  margin-top: 5%;
+}
+
+.sponsors{
+  font-family:impact;
+  font-size:50px;
+}
+
+.main3{
+  padding-top: 5%;
+}
+
+.form1{
+  float: right;
+  border: 0px;
+}
